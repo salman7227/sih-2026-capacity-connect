@@ -1,0 +1,126 @@
+.loginRegisterPage {
+	--auth-ink: #173b32;
+	--auth-muted: #718079;
+	--auth-green: #28745b;
+	--auth-mint: #e8f2ec;
+	--auth-line: #dce6df;
+	--auth-coral: #ef795f;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: grid;
+	place-items: center;
+	padding: 2rem 1.25rem;
+	background:
+		radial-gradient(ellipse at 12% 14%, rgb(211 231 216 / 70%), transparent 34rem),
+		radial-gradient(ellipse at 88% 86%, rgb(248 218 201 / 58%), transparent 31rem),
+		#f5f6ef;
+	color: var(--auth-ink);
+	font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+}
+
+.auth-card {
+	width: min(100%, 31rem);
+	padding: 2rem 2.5rem 1.5rem;
+	border: 1px solid rgb(216 227 218 / 90%);
+	border-top: 4px solid var(--auth-green);
+	border-radius: 0.75rem;
+	background: rgb(255 255 252 / 96%);
+	box-shadow: 0 24px 70px rgb(37 64 49 / 12%), 0 3px 10px rgb(37 64 49 / 5%);
+	animation: auth-arrive 420ms cubic-bezier(.2, .75, .25, 1) both;
+}
+
+.auth-brand {
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	margin-bottom: 1.65rem;
+	font-size: 0.96rem;
+	font-weight: 500;
+}
+
+.auth-brand strong {
+	font-weight: 750;
+}
+
+.brand-mark {
+	display: grid;
+	width: 2rem;
+	aspect-ratio: 1;
+	place-items: center;
+	border-radius: 0.45rem;
+	background: var(--auth-green);
+	color: white;
+	font-family: Georgia, serif;
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.loginOrRegisterHeader {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.25rem;
+	margin-bottom: 2rem;
+	padding: 0.3rem;
+	border: 1px solid var(--auth-line);
+	border-radius: 0.65rem;
+	background: #f1f4ef;
+}
+
+.loginOrRegisterHeader > button {
+	min-height: 2.75rem;
+	border: 0;
+	border-radius: 0.45rem;
+	background: transparent;
+	color: #697970;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.88rem;
+	font-weight: 650;
+	transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.loginOrRegisterHeader > button:hover {
+	background: #e5ede7;
+	color: var(--auth-ink);
+}
+
+.loginOrRegisterHeader > button:focus-visible,
+.auth-card button:focus-visible,
+.auth-card a:focus-visible,
+.auth-card input:focus-visible {
+	outline: 3px solid rgb(40 116 91 / 35%);
+	outline-offset: 2px;
+}
+
+.loginOrRegisterHeader > .selected {
+	background: white;
+	color: var(--auth-ink);
+	box-shadow: 0 1px 4px rgb(30 60 43 / 13%);
+}
+
+.auth-footer {
+	margin: 1.4rem 0 0;
+	color: #85918a;
+	font-size: 0.68rem;
+	text-align: center;
+}
+
+.auth-footer span {
+	padding: 0 0.25rem;
+	color: var(--auth-coral);
+}
+
+@keyframes auth-arrive {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 520px) {
+	.loginRegisterPage { padding: 1rem; }
+	.auth-card { padding: 1.5rem 1.25rem 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.auth-card { animation: none; }
+	.loginOrRegisterHeader > button { transition: none; }
+}
