@@ -1,8 +1,9 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage';
-import Login from './pages/login';
-import Register from './pages/register';
+import LoginPage from './pages/loginPage';
+// import Login from './components/login';
+// import Register from './components/register';
 
 
 function App() {
@@ -12,8 +13,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route path='/' element={<LandingPage />} /> {/* <-- ye page krna sohail */}
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<LoginPage />} />
 
           </Routes>
       </BrowserRouter>
