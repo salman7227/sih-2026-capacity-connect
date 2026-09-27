@@ -1,6 +1,6 @@
 import './loginPage.css'
-import Login from '../components/login'
-import Register from '../components/register'
+import Login from '../../components/login'
+import Register from '../../components/register'
 import { useState } from 'react'
 
 

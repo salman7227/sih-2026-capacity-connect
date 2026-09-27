@@ -98,7 +98,7 @@ export default function Login() {
                         />
                         <span>Remember me</span>
                     </label>
-                    <a className="auth-link" href="mailto:support@capacityconnect.org?subject=Password%20reset">Forgot password?</a>
+                    <a className="auth-link" href="/forgot-password">Forgot password?</a>
                 </div>
 
                 {formError && <p className="auth-message" role="status">{formError}</p>}
