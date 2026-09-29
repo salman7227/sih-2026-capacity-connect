@@ -1,0 +1,207 @@
+.trainerNavbar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 32px;
+	width: 100%;
+	min-height: 82px;
+	padding: 0 38px;
+	background: rgb(255 255 255 / 88%);
+	border-bottom: 1px solid #e6e7f4;
+	box-shadow: 0 2px 10px rgb(44 42 91 / 3%);
+	font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.trainerSearch {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	width: min(100%, 520px);
+	height: 48px;
+	padding: 0 15px;
+	background: #f0f0fc;
+	border: 1px solid #e9e8f8;
+	border-radius: 7px;
+	color: #606486;
+	transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.trainerSearch:focus-within {
+	border-color: #9582ed;
+	box-shadow: 0 0 0 3px rgb(119 62 232 / 10%);
+}
+
+.trainerSearch svg {
+	flex: 0 0 21px;
+	width: 21px;
+	height: 21px;
+	fill: none;
+	stroke: currentColor;
+	stroke-linecap: round;
+	stroke-width: 1.8;
+}
+
+.trainerSearch input {
+	width: 100%;
+	min-width: 0;
+	padding: 0;
+	color: #282b4b;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	font: inherit;
+	font-size: 14px;
+}
+
+.trainerSearch input::placeholder {
+	color: #777b99;
+	opacity: 1;
+}
+
+.trainerNavbarActions {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	flex: 0 0 auto;
+}
+
+.trainerNotifications,
+.trainerProfile {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	color: #282b4b;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.trainerNotifications {
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+}
+
+.trainerNotifications svg {
+	width: 27px;
+	height: 27px;
+	fill: none;
+	stroke: currentColor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.7;
+}
+
+.notificationIndicator {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 10px;
+	height: 10px;
+	background: #ef4444;
+	border: 1.5px solid #fff;
+	border-radius: 50%;
+}
+
+.trainerNavbarDivider {
+	width: 1px;
+	height: 40px;
+	background: #e3e4ef;
+}
+
+.trainerProfile {
+	gap: 14px;
+	min-width: 220px;
+	text-align: left;
+}
+
+.trainerAvatar {
+	width: 52px;
+	height: 52px;
+	object-fit: cover;
+	border: 2px solid #e8e5ff;
+	border-radius: 50%;
+}
+
+.trainerProfileText {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.trainerName {
+	color: #20223e;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.trainerRole {
+	color: #767a98;
+	font-size: 13px;
+	line-height: 1.2;
+}
+
+.trainerProfileChevron {
+	width: 19px;
+	height: 19px;
+	fill: none;
+	stroke: #777b99;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.8;
+}
+
+.trainerNotifications:focus-visible,
+.trainerProfile:focus-visible {
+	outline: 3px solid #a99afa;
+	outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+	.trainerNavbar {
+		gap: 12px;
+		min-height: 70px;
+		padding: 0 14px;
+	}
+
+	.trainerNavbarActions {
+		gap: 14px;
+	}
+
+	.trainerProfile {
+		gap: 10px;
+		min-width: 0;
+	}
+
+	.trainerAvatar {
+		width: 44px;
+		height: 44px;
+	}
+
+	.trainerProfileChevron,
+	.trainerRole,
+	.trainerNavbarDivider {
+		display: none;
+	}
+}
+
+@media (max-width: 420px) {
+	.trainerSearch {
+		width: 38px;
+		padding: 0 9px;
+	}
+
+	.trainerSearch input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		top: auto;
+		left: -10000px;
+	}
+}

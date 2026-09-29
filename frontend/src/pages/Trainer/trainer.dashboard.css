@@ -1,0 +1,10 @@
+ .trainerDashboard {
+	display: flex;
+	min-height: 100vh;
+	background: #f7f7ff;
+}
+
+.trainerDashboardMain {
+	flex: 1;
+	min-width: 0;
+}

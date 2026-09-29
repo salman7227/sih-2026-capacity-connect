@@ -1,0 +1,177 @@
+.stat-card {
+  position: relative;
+
+  min-height: 112px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeef6;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 8px rgba(70, 50, 120, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Hover */
+
+.stat-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(70, 50, 120, 0.08);
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f0eaff;
+
+  color: #6138e8;
+
+  font-size: 22px;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.stat-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.stat-title {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #35374a;
+}
+
+
+.stat-value-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 5px;
+}
+
+
+.stat-value {
+  margin: 0;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  color: #15192d;
+}
+
+
+/* =================================
+   CHANGE
+================================= */
+
+.stat-change {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  padding: 3px 6px;
+
+  border-radius: 5px;
+}
+
+
+.stat-change.positive {
+  color: #16865b;
+
+  background: #e9f8f1;
+}
+
+
+.stat-change.negative {
+  color: #dc4545;
+
+  background: #fff0f0;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.stat-description {
+  margin: 7px 0 0;
+
+  font-size: 12px;
+
+  color: #85899c;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1100px) {
+
+  .stat-card {
+    padding: 13px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .stat-card {
+    min-height: 104px;
+  }
+
+}
