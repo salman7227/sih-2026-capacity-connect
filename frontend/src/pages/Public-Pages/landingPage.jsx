@@ -1,4 +1,5 @@
 import './landingPage.css'
+import logo from '../../assets/logo.png'
 
 
 export default function LandingPage() {
@@ -8,9 +9,7 @@ export default function LandingPage() {
       {/* NAVBAR */}
       <nav className="navbar">
 
-        <div className="logo">
-          CAPACITY<span>CONNECT</span>
-        </div>
+        <img className="brand-logo" src={logo} alt="Capacity Connect" />
 
         <div className="nav-links">
           <a href="#home">Home</a>
@@ -19,9 +18,7 @@ export default function LandingPage() {
           <a href="#contact">Contact</a>
         </div>
 
-        <button className="nav-button">
-          Get Started
-        </button>
+       <a href="/login" className="nav-button">Get Started</a>
 
       </nav>
 
@@ -286,9 +283,9 @@ export default function LandingPage() {
           through one digital platform.
         </p>
 
-        <button className="primary-button">
-          Explore CAPACITY CONNECT
-        </button>
+        <a href="/login" className="primary-button">
+  Explore CAPACITY CONNECT
+</a>
 
       </section>
 
@@ -296,9 +293,7 @@ export default function LandingPage() {
       {/* FOOTER */}
       <footer className="footer">
 
-        <div className="logo">
-          CAPACITY<span>CONNECT</span>
-        </div>
+        <img className="brand-logo" src={logo} alt="Capacity Connect" />
 
         <p>
           Digital capacity building and learning management platform.
