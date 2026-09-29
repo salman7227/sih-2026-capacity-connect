@@ -1,0 +1,99 @@
+.quickActionContainer {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	min-height: 0;
+	margin-top: 18px;
+	padding: 18px 16px 16px;
+	color: #20223e;
+	background: #fff;
+	border: 1px solid #e9eaf4;
+	border-radius: 10px;
+	box-shadow: 0 5px 18px rgb(38 37 88 / 6%);
+	font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.quickActionContainer h2 {
+	margin: 0 0 14px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.quickActionGrid {
+	display: grid;
+	flex: 1;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(70px, 1fr));
+	gap: 10px;
+}
+
+.quickActionButton {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-width: 0;
+	min-height: 0;
+	height: 100%;
+	padding: 12px 8px;
+	color: #41358d;
+	background: #f2f0ff;
+	border: 1px solid #e9e5ff;
+	border-radius: 7px;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.quickActionButton svg {
+	flex: 0 0 26px;
+	width: 26px;
+	height: 26px;
+	fill: none;
+	stroke: #4f3fc0;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.8;
+}
+
+.quickActionButton span {
+	max-width: 100%;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.quickActionButton:hover {
+	transform: translateY(-1px);
+	background: #eae6ff;
+	border-color: #d7ceff;
+}
+
+.quickActionButton:focus-visible {
+	outline: 3px solid #a99afa;
+	outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+	.quickActionContainer {
+		margin-top: 0;
+		padding: 16px 13px 13px;
+	}
+
+	.quickActionButton {
+		min-height: 64px;
+		height: auto;
+		padding: 9px;
+	}
+
+	.quickActionGrid {
+		flex: initial;
+		grid-template-rows: repeat(2, minmax(64px, auto));
+	}
+
+	.quickActionButton span {
+		font-size: 12px;
+	}
+}

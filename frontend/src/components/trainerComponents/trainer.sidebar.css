@@ -1,0 +1,144 @@
+.sidebar {
+	position: sticky;
+	top: 0;
+	display: flex;
+	flex: 0 0 230px;
+	flex-direction: column;
+	width: 230px;
+	min-width: 230px;
+	height: 100vh;
+	min-height: 100vh;
+	padding: 22px 14px 18px;
+	overflow-y: auto;
+	color: #20244a;
+	background: #f4f3ff;
+	border-right: 1px solid #e6e4fa;
+	font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.toplogo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 68px;
+	margin: 0 4px 28px;
+}
+
+.sidebar .logo {
+	display: block;
+	width: 188px;
+	max-width: 100%;
+	height: 62px;
+	object-fit: contain;
+}
+
+.sidebarLinks {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.sidebarPrimaryLinks,
+.middleSidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.sidebarLink {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 55px;
+	padding: 0 15px;
+	color: #343858;
+	background: transparent;
+	border: 0;
+	border-radius: 7px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+	text-align: left;
+	transition: color 150ms ease, background-color 150ms ease;
+}
+
+.sidebarLink:hover {
+	color: #4e36c8;
+	background: #e9e5ff;
+}
+
+.sidebarLink:focus-visible,
+.sidebarLogOut button:focus-visible {
+	outline: 3px solid #a99afa;
+	outline-offset: 2px;
+}
+
+.sidebarLink.active {
+	color: #fff;
+	background: linear-gradient(105deg, #773ee8 0%, #4938e8 100%);
+	box-shadow: 0 4px 10px rgb(83 58 211 / 22%);
+}
+
+.middleSidebar {
+	margin-block: auto;
+	padding-block: 22px;
+	border-block: 1px solid #e2e0f3;
+}
+
+.sidebarLogOut {
+	margin-top: 16px;
+	padding-top: 16px;
+	border-top: 1px solid #e2e0f3;
+}
+
+.sidebarLogOut button {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 50px;
+	padding: 0 15px;
+	color: #343858;
+	background: transparent;
+	border: 0;
+	border-radius: 7px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: left;
+	transition: color 150ms ease, background-color 150ms ease;
+}
+
+.sidebarLogOut button:hover {
+	background:#ef4444; border-color:transparent; box-shadow: 0 12px 30px rgba(239,68,68,0.12); transform:translateY(-2px);
+}
+
+@media (max-width: 600px) {
+	.sidebar {
+		flex-basis: 190px;
+		width: 190px;
+		min-width: 190px;
+		padding: 14px 9px 10px;
+	}
+
+	.toplogo {
+		margin: 0 0 20px;
+	}
+
+	.sidebar .logo {
+		width: 160px;
+		height: 56px;
+	}
+
+	.sidebarLink,
+	.sidebarLogOut button {
+		padding: 0 10px;
+		font-size: 14px;
+	}
+
+	.sidebarLink,
+	.sidebarLogOut button {
+		min-height: 46px;
+	}
+}

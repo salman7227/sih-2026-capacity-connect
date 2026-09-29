@@ -1,0 +1,31 @@
+ .trainerDashboard {
+	display: flex;
+	min-height: 100vh;
+	background: #f7f7ff;
+}
+
+.trainerDashboardMain {
+	flex: 1;
+	min-width: 0;
+}
+
+.trainerDashboardLowerGrid {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+	align-items: stretch;
+	gap: 16px;
+	margin: 0 clamp(16px, 2.2vw, 30px) 24px;
+}
+
+@media (max-width: 900px) {
+	.trainerDashboardLowerGrid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 560px) {
+	.trainerDashboardLowerGrid {
+		gap: 14px;
+		margin-inline: 16px;
+	}
+}
