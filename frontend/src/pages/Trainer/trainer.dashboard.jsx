@@ -3,6 +3,8 @@ import TrainerSidebar from '../../components/trainerComponents/trainer.sidebar.j
 import TrainerNavbar from '../../components/trainerComponents/trainer.navbar.jsx'
 import WelcomeBanner from '../../components/trainerComponents/trainer.welcomeBanner.jsx'
 import DashboardStats from '../../components/trainerComponents/trainer.dashboardStats.jsx'
+import TrainerRecentCourses from '../../components/trainerComponents/trainer.recentCourses.jsx'
+import TrainerQuickAction from '../../components/trainerComponents/trainer.quickAction.jsx'
 import { useState } from 'react'
 
 export default function TrainerDashboardPage(){
@@ -14,6 +16,11 @@ export default function TrainerDashboardPage(){
                 <TrainerNavbar selectedPage={selectedPage}/>
                 <WelcomeBanner />
                 <DashboardStats/>
+                <div className="trainerDashboardLowerGrid">
+                    <TrainerRecentCourses />
+                    <TrainerQuickAction />
+                </div>
+                
             </main>
 
         </div>
