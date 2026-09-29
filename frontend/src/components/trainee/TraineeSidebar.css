@@ -1,0 +1,315 @@
+/* ================================
+   TRAINEE SIDEBAR
+================================ */
+
+.trainee-sidebar {
+  width: 262px;
+  height: 100vh;
+  background: linear-gradient(180deg, #edf5ff 0%, #e5f0ff 100%);
+  border-right: 1px solid #dce8f7;
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  z-index: 1000;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.sidebar-logo {
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #1677e8, #0756c9);
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  box-shadow: 0 7px 18px rgba(23, 104, 220, 0.22);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #101c38;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo-text strong {
+  color: #1769df;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.sidebar-navigation {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 14px;
+}
+
+.sidebar-main-menu,
+.sidebar-bottom-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+/* ================================
+   NAVIGATION LINKS
+================================ */
+
+.sidebar-link {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 19px;
+
+  padding: 0 20px;
+
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  color: #102653;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.sidebar-link svg {
+  flex-shrink: 0;
+}
+
+
+/* Hover */
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.75);
+  color: #0869e8;
+}
+
+
+/* Active */
+
+.sidebar-link.active {
+  background: linear-gradient(135deg, #1478ee, #0968df);
+
+  color: #ffffff;
+
+  box-shadow: 0 8px 18px rgba(16, 109, 228, 0.2);
+}
+
+.sidebar-link.active:hover {
+  color: #ffffff;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.sidebar-divider {
+  height: 1px;
+
+  background: #cbdcf1;
+
+  margin: 24px 10px 18px;
+}
+
+
+/* ================================
+   BOTTOM MESSAGE
+================================ */
+
+.sidebar-message {
+  height: 245px;
+
+  margin-top: auto;
+
+  padding: 0 28px 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.sidebar-message::before {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  border-radius: 50%;
+
+  background: rgba(153, 202, 255, 0.25);
+
+  left: -105px;
+  bottom: -90px;
+}
+
+.sidebar-message::after {
+  content: "";
+
+  position: absolute;
+
+  width: 145px;
+  height: 145px;
+
+  border-radius: 50%;
+
+  background: rgba(93, 168, 246, 0.16);
+
+  right: -75px;
+  bottom: -55px;
+}
+
+.sidebar-message h3 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 0;
+
+  color: #0c3472;
+
+  font-size: 17px;
+  line-height: 1.45;
+
+  font-weight: 700;
+}
+
+.message-decoration {
+  position: absolute;
+
+  width: 95px;
+  height: 130px;
+
+  left: 12px;
+  bottom: -65px;
+
+  border-radius: 50%;
+
+  background: rgba(29, 120, 225, 0.15);
+
+  transform: rotate(-25deg);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .trainee-sidebar {
+    width: 220px;
+  }
+
+  .sidebar-logo {
+    padding: 0 20px;
+  }
+
+  .sidebar-link {
+    padding: 0 15px;
+    gap: 13px;
+    font-size: 14px;
+  }
+
+  .logo-text span,
+  .logo-text strong {
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .trainee-sidebar {
+    width: 78px;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+
+  .sidebar-divider {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .sidebar-message {
+    display: none;
+  }
+}
