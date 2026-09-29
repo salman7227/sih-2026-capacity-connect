@@ -4,22 +4,27 @@ import LandingPage from './pages/Public-Pages/landingPage';
 import LoginPage from './pages/Public-Pages/loginPage';
 import ForgotPassword from './pages/Public-Pages/forgetPassword';
 import TrainerDashboardPage from './pages/Trainer/trainer.dashboard';
-// import Login from './components/login';
-// import Register from './components/register';
-
+import Dashboard from './pages/Admin/Dashboard';
+import AdminLayout from './pages/Admin/AdminLayout';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<LandingPage />} /> {/* <-- ye page krna sohail */}
-            <Route path='/login' element={<LoginPage />} />
-            <Route path='/forgot-password' element={<ForgotPassword />} />
-            <Route path='/trainer/dashboard' element={<TrainerDashboardPage/>} />
+        <Routes>
 
-          </Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
+
+          <Route path='/trainer/dashboard' element={<TrainerDashboardPage />} />
+
+          <Route path='/admin' element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
+          </Route>
+
+        </Routes>
       </BrowserRouter>
     </>
   )
